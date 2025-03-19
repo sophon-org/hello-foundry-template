@@ -1,0 +1,36 @@
+# The Default Profile
+[profile.default]
+solc_version = "0.8.24"
+zksolc_version = "1.5.11"
+evm_version = "paris"
+src = "src"
+out = "out"
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+libs = ["lib"]
+
+[fmt]
+line_length = 100
+
+[profile.default.fuzz]
+runs = 5
+
+[invariant]
+depth = 15
+runs = 10
+
+[etherscan]
+sepoliaTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SEPOLIA_VERIFIER_URL}", chain = 11155111 }
+sophonTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_TESTNET_VERIFIER_URL}", chain = 531050104 } 
+sophon = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_VERIFIER_URL}", chain = 50104 } 
+ethereum = { key = "${ETHERSCAN_API_KEY}", url = "${VERIFIER_URL}", chain = 1 } 
+
+[rpc_endpoints]
+sepoliaTestnet = "${SEPOLIA_RPC_URL}"
+sophonTestnet = "${SOPHON_TESTNET_RPC_URL}"
+sophon = "${SOPHON_RPC_URL}"
+ethereum = "${RPC_URL}"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
