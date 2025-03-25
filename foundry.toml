@@ -22,10 +22,8 @@ depth = 15
 runs = 10
 
 [etherscan]
-sepoliaTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SEPOLIA_VERIFIER_URL}", chain = 11155111 }
 sophonTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_TESTNET_VERIFIER_URL}", chain = 531050104 } 
-sophon = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_VERIFIER_URL}", chain = 50104 } 
-ethereum = { key = "${ETHERSCAN_API_KEY}", url = "${VERIFIER_URL}", chain = 1 } 
+sophon = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_VERIFIER_URL}", chain = 50104 }
 
 [rpc_endpoints]
 sepoliaTestnet = "${SEPOLIA_RPC_URL}"
