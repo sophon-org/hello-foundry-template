@@ -2,7 +2,7 @@
 [profile.default]
 solc_version = "0.8.24"
 zksolc_version = "1.5.11"
-evm_version = "paris"
+evm_version = "cancun"
 src = "src"
 out = "out"
 ffi = true
@@ -10,6 +10,9 @@ ast = true
 build_info = true
 extra_output = ["storageLayout"]
 libs = ["lib"]
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+]
 
 [fmt]
 line_length = 100
@@ -20,10 +23,6 @@ runs = 5
 [invariant]
 depth = 15
 runs = 10
-
-[etherscan]
-sophonTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_TESTNET_VERIFIER_URL}", chain = 531050104 } 
-sophonMainnet = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_MAINNET_VERIFIER_URL}", chain = 50104 }
 
 [rpc_endpoints]
 sophonTestnet = "${SOPHON_TESTNET_RPC_URL}"
