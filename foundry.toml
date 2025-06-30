@@ -24,7 +24,16 @@ runs = 5
 depth = 15
 runs = 10
 
+[etherscan]
+sepoliaTestnet = { key = "${ETHERSCAN_API_KEY}", url = "${SEPOLIA_VERIFIER_URL}", chain = 11155111 }
+testnet = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_TESTNET_VERIFIER_URL}", chain = 531050104 }
+sophon = { key = "${ETHERSCAN_API_KEY}", url = "${SOPHON_VERIFIER_URL}", chain = 50104 }
+ethereum = { key = "${ETHERSCAN_API_KEY}", url = "${VERIFIER_URL}", chain = 1 }
+
 [rpc_endpoints]
-sophonTestnet = "${SOPHON_TESTNET_RPC_URL}"
-sophonMainnet = "${SOPHON_MAINNET_RPC_URL}"
+sepoliaTestnet = "${SEPOLIA_RPC_URL}"
+testnet = "${SOPHON_TESTNET_RPC_URL}"
+sophon = "${SOPHON_RPC_URL}"
+ethereum = "${RPC_URL}"
+
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
