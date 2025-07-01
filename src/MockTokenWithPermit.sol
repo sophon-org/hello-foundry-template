@@ -6,7 +6,7 @@ import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20P
 
 contract MockTokenWithPermit is ERC20, ERC20Permit {
     constructor() ERC20("Mock Permit Token", "MPT") ERC20Permit("Mock Permit Token") {
-        _mint(msg.sender, 1000000 * 10**18);
+        _mint(msg.sender, 1000000 * 10 ** 18);
     }
 
     function mint(address to, uint256 amount) external {
